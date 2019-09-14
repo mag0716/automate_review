@@ -71,3 +71,23 @@ workflow ごとのステータスや結果の確認、ペンディングされ�
 #### Viewing your workflow history
 
 * Actions タブから確認できる
+
+### [Persisting workflow data using artifacts](https://help.github.com/en/articles/persisting-workflow-data-using-artifacts)
+
+成果物は Job 間での共有、データの保存が可能
+
+#### About workflow artifacts
+
+* 成果物はプッシュの workflow は 90日間、PR では30日間保持される
+* 成果物をアップロードするには、`actions/uplaod-artifact` or `download-artifact` を利用する
+* Job 間で共有するためにはアップロードする
+* Step 間で共有するためには inputs, outputs を利用する
+
+#### Passing data between jobs in a workflow
+
+* `uplaod-archive`, `download-archive` を利用する
+* workflow 間で共有するためには Amazon S3 などに保存する必要がある
+
+#### Uploading build and test artifacts
+
+* リポジトリのパスを指定してテスト結果を保存することができる
