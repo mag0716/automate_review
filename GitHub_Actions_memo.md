@@ -63,3 +63,11 @@ https://github.com/actions から Action を探せる
 #### Adding a workflow status badge to your repository
 
 * バッジで workflow のステタースを表示することができる
+
+## [Managing a workflow run](https://help.github.com/en/articles/configuring-a-workflow)
+
+workflow ごとのステータスや結果の確認、ペンディングされている workflow のキャンセル、失敗した workflow のデバッグ、ログの確認、成果物のダウンロードが可能
+
+#### Viewing your workflow history
+
+* Actions タブから確認できる
