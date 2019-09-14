@@ -33,3 +33,33 @@ https://github.com/actions から Action を探せる
 * 1時間に1000API のリクエスト
 * Job は6時間まで
 * 同時に20のJobを実行できる
+
+## [Configuring workflows](https://help.github.com/en/articles/configuring-workflows)
+
+### [Configuring a workflow](https://help.github.com/en/articles/configuring-a-workflow)
+
+* write, admin 権限であれば workflow の作成、変更ができる
+
+#### Triggering a workflow with events
+
+* `on` にトリガーイベントを指定する
+* 定期的に実行する場合は `schedule` で指定する
+
+#### Filtering for specific branches
+
+* `branches` に対象となるブランチを指定することができる
+
+#### Using the checkout action
+
+* ビルドやテストする前にコードを取得するために `actions/checkout@v1` を利用する
+
+#### Referencing actions in your workflow
+
+* private リポジトリで定義された Action を利用するためには workflow ファイルと Action を
+同じリポジトリに配置しておく必要がある
+* public リポジトリで定義された Action へは `{owner}/{repo}@{ref}` or `{owner}/{repo}/{path}@{ref}` で参照できる
+* 同じリポジトリの Action へは `{owner}/{repo}@{ref}` or `./path/to/dir` で参照できる
+
+#### Adding a workflow status badge to your repository
+
+* バッジで workflow のステタースを表示することができる
