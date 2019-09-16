@@ -120,3 +120,16 @@ workflow ごとのステータスや結果の確認、ペンディングされ�
   * `output_id`：_から始まる文字列の ID でユニークである必要がある
   * `output_id.description`：概要
 * `branding`：色とアイコンを指定し GitHub Marketplace で差別化できる
+
+## [Setting up continuous integration on GitHub](https://help.github.com/en/articles/setting-up-continuous-integration-on-github)
+
+### [About continuous integration](https://help.github.com/en/articles/about-continuous-integration)
+
+#### About continuous integration using GitHub Actions
+
+* GitHub はリポジトリのコードを解析して、CI の workflow をおすすめしてくれる
+
+#### Notifications for workflow runs
+
+* メールか Web notifications を有効にしていたら、workflow 完了後に通知を受け取れる
+* 失敗した時のみ通知することもできる
