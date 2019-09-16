@@ -91,3 +91,32 @@ workflow ごとのステータスや結果の確認、ペンディングされ�
 #### Uploading build and test artifacts
 
 * リポジトリのパスを指定してテスト結果を保存することができる
+
+## [Building actions](https://help.github.com/en/articles/building-actions)
+
+### [About Actions](https://help.github.com/en/articles/about-actions)
+
+#### Choosing a location for your action
+
+* Action のファイルはリポジトリのどこにでも配置できるが、`.github` に配置することが推奨されている
+
+#### Versioning your action
+
+* 特定のバージョンの Action には コミット SHA, ブランチ、タグで指定できる
+* セマンティックバージョニングの利用が推奨されている
+
+### [Metadata syntax for GitHub Actions](https://help.github.com/en/articles/metadata-syntax-for-github-actions)
+
+#### About YAML syntax for GitHub Actions
+
+* `name`：Action 名で GitHub の表示で利用される
+* `description`：Action の概要
+* `inputs`：(Optional) 入力データで、環境変数として保存される。ids は lowercase に変換されるので lowercase の利用が推奨されている
+  * `input_id`：`_` から始まる文字列の ID でユニークである必要がある
+  * `input_id.description`：概要
+  * `input_id.required`：必須かどうか
+  * `input_id.default`：(Optional) 指定されなかった場合に利用されるデータ
+* `outputs`：(Optional) 出力データで以降の Action で利用できる。。ids は lowercase に変換されるので lowercase の利用が推奨されている
+  * `output_id`：_から始まる文字列の ID でユニークである必要がある
+  * `output_id.description`：概要
+* `branding`：色とアイコンを指定し GitHub Marketplace で差別化できる
